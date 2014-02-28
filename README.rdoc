@@ -1,0 +1,11 @@
+== StudAPI
+
+HTML is pretty cool, but JSON makes API consumers happy, check out the files below:
+
+* controllers/student_controller.rb
+
+* models/students.rb
+
+* views/students
+
+Likewise, I've already run 'rails g scaffold Stud firstname lastname github' so you can see what the rails generator makes for a resource called Stud

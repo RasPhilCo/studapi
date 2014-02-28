@@ -1,0 +1,33 @@
+<h1>Listing studs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Github</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @studs.each do |stud| %>
+      <tr>
+        <td><%= stud.firstname %></td>
+        <td><%= stud.lastname %></td>
+        <td><%= stud.github %></td>
+        <td><%= link_to 'Show', stud %></td>
+        <td><%= link_to 'Edit', edit_stud_path(stud) %></td>
+        <td><%= link_to 'Destroy', stud, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stud', new_stud_path %>
+
+
